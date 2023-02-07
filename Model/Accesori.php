@@ -6,7 +6,7 @@
         public function __construct($name, $price, $image, Categoria $category, $material, $size){
             parent::__construct($name, $price, $image);
             $this->material = $material;
-            $this->size = $material;
+            $this->size = $size;
         }
     }
 ?>
