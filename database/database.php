@@ -3,7 +3,7 @@
     include __DIR__ . '/../Model/Categoria.php';
     include __DIR__ . '/../Model/Gioco.php';
     include __DIR__ . '/../Model/Cibo.php';
-    include __DIR__ . '/../Model/Acessori.php';
+    include __DIR__ . '/../Model/Accesori.php';
 
     $categories = [
         'cane' => new Categoria('Cane', '<i class="fa-solid fa-dog"></i>'),

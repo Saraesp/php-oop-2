@@ -18,7 +18,16 @@
             <?php foreach($products as $product){ ?>
                 <div class="col-sm-4">
                     <div class="card">
+                         <img src="<?php echo $product->image; ?>" class="image-fluid" alt="">
+                        <h4><?php echo $product->product_name; ?></h4>
+                        <p>
+                            <?php echo $product->category->icon.' '.$product->category->name; ?>
+                        </p>
+                        <p>
+                            prezzo: €<?php echo $product->price; ?>
+                        </p>
                     </div>
+                </div>
             <?php } ?>
         </div>
 
