@@ -19,13 +19,39 @@
                 <div class="col-sm-4">
                     <div class="card">
                          <img src="<?php echo $product->image; ?>" class="image-fluid" alt="">
-                        <h4><?php echo $product->product_name; ?></h4>
-                        <p>
-                            <?php echo $product->category->icon.' '.$product->category->name; ?>
-                        </p>
-                        <p>
-                            prezzo: €<?php echo $product->price; ?>
-                        </p>
+                            <h4><?php echo $product->product_name; ?></h4>
+                            <p>
+                                <p>
+                                    <?php echo $product->category->icon.' '.$product->category->name; ?>
+                                </p>
+                                prezzo: €<?php echo $product->price; ?>
+                            </p>
+                            <p>
+                                <?php 
+                                    if(isset($product->weight)){
+                                        echo $product->weight."<br/>";
+                                    }; 
+
+                                    if(isset($product->ingredients)){
+                                        $string = 'Ingredienti: ';
+                                        foreach($product->ingredients as $ingredient){
+                                            $string.= $ingredient." ";
+                                        }
+                                    }; 
+
+                                    if(isset($product->material)){
+                                        echo $product->material."<br/>";
+                                    }; 
+
+                                    if(isset($product->size)){
+                                        echo $product->size."<br/>";
+                                    }; 
+
+                                    if(isset($product->features)){
+                                        echo $product->features."<br/>";
+                                    }; 
+                                ?>
+                            </p>
                     </div>
                 </div>
             <?php } ?>
